@@ -14,3 +14,5 @@ with open("../../_common/logger.py", "w") as logger_module:
     exec(logger_module.read())
 LOGGER: Logger = Logger(OUTPUT_PATH)
 ```
+
+Then published to PyPI so I can properly install and `import` it for usage.
