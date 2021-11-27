@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/wtslog/Logger.py
+src/wtslog/__init__.py
+src/wtslog.egg-info/PKG-INFO
+src/wtslog.egg-info/SOURCES.txt
+src/wtslog.egg-info/dependency_links.txt
+src/wtslog.egg-info/top_level.txt
