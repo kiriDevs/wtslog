@@ -6,7 +6,7 @@ class Logger:
     loglines: [str]
     indentation: int
 
-    def _init__(self, outpath):
+    def __init__(self, outpath):
         self.outpath = outpath
         self.loglines = []
         self.indentation = 0
