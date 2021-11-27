@@ -15,4 +15,5 @@ with open("../../_common/logger.py", "w") as logger_module:
 LOGGER: Logger = Logger(OUTPUT_PATH)
 ```
 
-Then published to PyPI so I can properly install and `import` it for usage.
+Then [published to PyPI](https://pypi.org/project/wtslog/) so I can properly
+install and `import` it for usage.
