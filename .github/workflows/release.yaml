@@ -1,0 +1,35 @@
+name: Auto-Upload Releases to PyPI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  auto_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+
+      - name: Setup Python 3.6
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.6'
+          architecture: 'x64'
+
+      - name: Install build dependencies
+        run: |
+          pip install build
+          pip install twine
+
+      - name: Build the module
+        run: python -m build
+
+      - name: Upload build result to PyPI
+        run: |
+          python -m twine \
+            --non-interactive \
+            -u __token__ \
+            -p ${{ secrets.PYPI_WTSLOG_PUBLISH_TOKEN }} \
+            dist/*
