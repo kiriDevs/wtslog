@@ -21,7 +21,7 @@ class Logger:
         return " " * INDENTATION_CONSTANT * self.indentation
 
     def print(self, msg: str = ""):
-        print(self.getIndent() + msg)
+        print(self.getIndent() + str(msg))
 
     def log(self, msg: str = ""):
         self.loglines.append(self.getIndent() + str(msg))
