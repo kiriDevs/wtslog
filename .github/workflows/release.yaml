@@ -28,7 +28,7 @@ jobs:
 
       - name: Upload build result to PyPI
         run: |
-          python -m twine \
+          python -m twine upload \
             --non-interactive \
             -u __token__ \
             -p ${{ secrets.PYPI_WTSLOG_PUBLISH_TOKEN }} \
