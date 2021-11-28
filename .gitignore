@@ -3,3 +3,6 @@
 
 # Ignore info-egg
 /src/wtslog.egg-info/
+
+# Ignore python caches
+__pycache__/
