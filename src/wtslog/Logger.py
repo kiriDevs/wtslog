@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
-INDENTATION_CONSTANT = 2
-
 class Logger:
     outpath: str
     loglines: [str]
     indentation: int
+    indent_amount: int
 
-    def __init__(self, outpath):
+    def __init__(self, outpath, indent_amount=2):
         self.outpath = outpath
         self.loglines = []
         self.indentation = 0
+        self.indent_amount = indent_amount
 
     def indent(self, amount=1):
         self.indentation += amount
@@ -18,7 +18,7 @@ class Logger:
         self.indent(amount*(-1))
 
     def getIndent(self) -> str:
-        return " " * INDENTATION_CONSTANT * self.indentation
+        return " " * self.indent_amount * self.indentation
 
     def print(self, msg: str = ""):
         print(self.getIndent() + str(msg))
